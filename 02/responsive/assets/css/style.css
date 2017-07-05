@@ -50,6 +50,12 @@ hr {
   cursor: pointer;
 }
 
+div.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
 
 /* Header */
 
@@ -215,5 +221,74 @@ footer {
   position: absolute;
   bottom: 40px;
   padding: 20px;
+}
+
+
+/* Responsive tweaks */
+
+@media screen and (max-width: 980px) and (min-width: 769px) {
+  /* Main section */
+  div.container {
+    max-width: 760px;
+  }
+  section.main-content {
+    width: 460px;
+  }
+  /* Portfolio specific tweaks */
+  #portfolio-list li {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  #portfolio-list li img {
+    width: 100%;
+    height: 100%;
+  }
+  #portfolio-list li label {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Main section */
+  div.container {
+    max-width: 95%
+  }
+  section.main-content {
+    width: 100%;
+    display: block;
+    float: none;
+    margin-bottom: 20px;
+  }
+  aside {
+    width: 100%;
+    display: block;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  /* Header tweaks */
+  header div.container {
+    max-width: 100%;
+    margin: 0;
+  }
+  header h1 {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  nav {
+    float: none;
+  }
+  nav ul {
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+  }
+  nav ul li {
+    font-size: 20px;
+  }
 }
 
