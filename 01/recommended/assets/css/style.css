@@ -46,6 +46,10 @@ hr {
   margin: 20px 0;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 
 /* Header */
 
@@ -91,6 +95,43 @@ nav li:first-child {
 section,
 aside {
   padding: 27px;
+}
+
+
+/* Forms */
+
+form {}
+
+form .form-element {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+form input {
+  display: block;
+  width: 95%;
+  margin: 5px;
+  padding: 5px;
+}
+
+form textarea {
+  display: block;
+  width: 95%;
+  height: 10em;
+  margin: 5px;
+  resize: none;
+}
+
+form input[type="submit"] {
+  color: #ffffff;
+  background: #4aaaa5;
+  border: none;
+  width: 100px;
+  padding: 10px;
 }
 
 
