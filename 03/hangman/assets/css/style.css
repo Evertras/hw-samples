@@ -1,0 +1,20 @@
+h1 {
+  font-size: 20px;
+  margin-bottom: 3em;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#game-area {
+  width: 500px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1em;
+}
