@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+}
+
+h1 {
+  background-color: orange;
+  color: white;
+  font-size: 50px;
+  display: inline-block;
+  padding: 10px;
+}
+
+div, h1 {
+  margin: 10px;
+}
+
+p {
+  padding: 1em 0;
+}
+
+#instructions {
+  padding: 10px;
+  background-color: beige;
+  display: inline-block;
+  color: green;
+}
+
+#target-score {
+  height: 200px;
+  width: 300px;
+  background-color: lightgreen;
+  padding: 10px;
+  font-size: 30px;
+  float: left;
+}
+
+#wins-losses-container {
+  display: inline-block;
+  height: 200px;
+  background-color: lightgreen;
+  padding: 10px;
+  float: left;
+}
+
+#crystals-container {
+  clear: both;
+}
+
+#crystals-container button {
+  width: 100px;
+  height: 100px;
+  background-size: 100px;
+  background-color: white;
+}
+
+#crystal-1 {
+  background-image: url('../images/crystal1.jpg');
+}
+
+#crystal-2 {
+  background-image: url('../images/crystal2.png');
+}
+
+#crystal-3 {
+  background-image: url('../images/crystal3.png');
+}
+
+#crystal-4 {
+  background-image: url('../images/crystal4.jpg');
+}
+
+#crystals-container::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.score-box {
+  width: 200px;
+  background-color: teal;
+  color: white;
+  padding: 20px;
+}
+
+#total-score {
+  font-size: 40px;
+}
