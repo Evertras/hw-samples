@@ -6,11 +6,17 @@ body {
   background-color: gray;
 }
 
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
 h1 {
   background-color: orange;
   color: white;
   font-size: 50px;
-  display: inline-block;
+  display: block;
   padding: 10px;
 }
 
