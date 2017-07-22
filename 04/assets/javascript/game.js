@@ -1,7 +1,7 @@
-var targetScore;
-var userScore;
-var totalWins;
-var totalLosses;
+var targetScore = 0;
+var userScore = 0;
+var totalWins = 0;
+var totalLosses = 0;
 var crystalScores = [];
 
 function startGame() {
@@ -11,6 +11,15 @@ function startGame() {
   for (var i = 0; i < 4; i++) {
     crystalScores[i] = Math.floor(Math.random() * 12 + 1);
   }
+
+  updateDisplays();
+}
+
+function updateDisplays() {
+  document.getElementById('wins').innerHTML = totalWins;
+  document.getElementById('losses').innerHTML = totalLosses;
+  document.getElementById('target-score').innerHTML = targetScore;
+  document.getElementById('user-score').innerHTML = userScore;
 }
 
 startGame();
