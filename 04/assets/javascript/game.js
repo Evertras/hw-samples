@@ -11,8 +11,6 @@ function startGame() {
   for (var i = 0; i < 4; i++) {
     crystalScores[i] = Math.floor(Math.random() * 12 + 1);
   }
-
-  updateDisplays();
 }
 
 function updateDisplays() {
@@ -22,4 +20,35 @@ function updateDisplays() {
   document.getElementById('user-score').innerHTML = userScore;
 }
 
+function addScore(score) {
+  userScore += score;
+
+  if (userScore === targetScore) {
+    totalWins++;
+    startGame();
+  } else if (userScore > targetScore) {
+    totalLosses++;
+    startGame();
+  }
+
+  updateDisplays();
+}
+
+document.getElementById('crystal-1').addEventListener('click', function() {
+  addScore(crystalScores[0]);
+});
+
+document.getElementById('crystal-2').addEventListener('click', function() {
+  addScore(crystalScores[1]);
+});
+
+document.getElementById('crystal-3').addEventListener('click', function() {
+  addScore(crystalScores[2]);
+});
+
+document.getElementById('crystal-4').addEventListener('click', function() {
+  addScore(crystalScores[3]);
+});
+
 startGame();
+updateDisplays();
