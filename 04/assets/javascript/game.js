@@ -34,21 +34,13 @@ function addScore(score) {
   updateDisplays();
 }
 
-document.getElementById('crystal-1').addEventListener('click', function() {
-  addScore(crystalScores[0]);
-});
-
-document.getElementById('crystal-2').addEventListener('click', function() {
-  addScore(crystalScores[1]);
-});
-
-document.getElementById('crystal-3').addEventListener('click', function() {
-  addScore(crystalScores[2]);
-});
-
-document.getElementById('crystal-4').addEventListener('click', function() {
-  addScore(crystalScores[3]);
-});
+for (var i = 0; i < 4; i++) {
+  (function(index) {
+    document.getElementById('crystal-' + (index + 1)).addEventListener('click', function() {
+      addScore(crystalScores[index]);
+    });
+  })(i);
+}
 
 startGame();
 updateDisplays();
